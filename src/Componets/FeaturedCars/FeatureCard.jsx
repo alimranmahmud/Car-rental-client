@@ -1,23 +1,49 @@
-import React from 'react';
+import { Link } from "react-router";
 
-const FeatureCard = ({car}) => {
+const FeatureCard = ({ car }) => {
+  const {_id, carName, image, rentPerDay, category, providerName } = car;
 
-    return (
-        <div className="card bg-base-100  shadow-sm">
-            <div >
-                <img className='w-full'
-                    src={car.image}
-                    alt="Shoes" />
-            </div>
-            <div className="card-body">
-                <h2 className="card-title">{car.title}</h2>
-                <p>{car.description}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn w-full btn-primary">View Details</button>
-                </div>
-            </div>
+
+  return (
+    <div className="card  bg-white shadow-md hover:shadow-xl transition rounded-lg border">
+      
+      {/* Image Section */}
+      <figure className="h-48 w-full overflow-hidden">
+        <img
+          src={image}
+          alt={carName}
+          className="w-full h-full object-cover hover:scale-105 transition duration-300"
+        />
+      </figure>
+
+      {/* Card Body */}
+      <div className="card-body p-4">
+
+        {/* Car Name */}
+        <h2 className="card-title text-lg font-bold text-gray-800">
+          {carName}
+        </h2>
+
+        {/* Category */}
+        <p className="text-sm text-gray-500">Category: {category}</p>
+
+        {/* Provider */}
+        <p className="text-sm text-gray-500">Provider: {providerName}</p>
+
+        {/* Rent Price */}
+        <p className="font-semibold text-gray-700 text-lg">
+          ${rentPerDay} <span className="text-sm text-gray-500">/day</span>
+        </p>
+
+        {/* Actions */}
+        <div className="card-actions mt-3">
+          <button className="btn btn-primary btn-sm w-full">
+            <Link to={`/car_details/${_id}`}>View Details</Link>
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default FeatureCard;
