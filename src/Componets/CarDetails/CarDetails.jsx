@@ -26,7 +26,6 @@ const CarDetails = () => {
     return (
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 mt-10">
 
-            {/* Car Image */}
             <div className="w-full h-72 overflow-hidden rounded-lg">
                 <img
                     src={image}
@@ -35,7 +34,6 @@ const CarDetails = () => {
                 />
             </div>
 
-            {/* Car Info */}
             <div className="mt-6 space-y-3">
                 <h2 className="text-3xl font-bold">{carName}</h2>
 

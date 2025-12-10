@@ -20,7 +20,6 @@ const Booking = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
-  // Auto Price Calculation
   const calculateDays = () => {
     if (!startDate || !endDate) return 0;
     const start = new Date(startDate);
@@ -32,7 +31,6 @@ const Booking = () => {
   const totalDays = calculateDays();
   const totalPrice = totalDays * rentPerDay;
 
-  // Handle Booking Submit
   const handleBooking = () => {
     if (!startDate || !endDate) {
       toast.error("Please select both start and end dates!");
@@ -73,10 +71,8 @@ const Booking = () => {
   return (
     <div className="max-w-3xl mx-auto mt-10 bg-white p-6 shadow-lg rounded-lg">
 
-      {/* Title */}
       <h2 className="text-3xl font-bold mb-6 text-center">Book Your Car</h2>
 
-      {/* Car Preview */}
       <div className="flex items-center gap-4">
         <img
           src={image}
@@ -94,7 +90,6 @@ const Booking = () => {
         </div>
       </div>
 
-      {/* Date Inputs */}
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="font-semibold">Start Date</label>
@@ -117,7 +112,6 @@ const Booking = () => {
         </div>
       </div>
 
-      {/* Price Summary */}
       <div className="mt-6 p-4 bg-gray-100 rounded-lg">
         <p className="text-lg font-semibold">
           Total Days: <span className="text-blue-600">{totalDays}</span>
@@ -128,7 +122,6 @@ const Booking = () => {
         </p>
       </div>
 
-      {/* Submit Button */}
       <button
         onClick={handleBooking}
         className="btn btn-primary w-full mt-6 text-white"

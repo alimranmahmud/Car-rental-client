@@ -4,9 +4,8 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../Context/AuthContext";
 
 const AddCar = () => {
-  const { user } = useContext(AuthContext); // Logged-in user
-  // user.displayName → providerName
-  // user.email → providerEmail
+  const { user } = useContext(AuthContext);
+
 
   const handleAddCar = (e) => {
     e.preventDefault();

@@ -56,7 +56,6 @@ const UpdateMyListing = () => {
 
       <form onSubmit={handleUpdateCar} className="space-y-4">
 
-        {/* Car Name */}
         <div>
           <label className="font-semibold">Car Name</label>
           <input
@@ -68,7 +67,6 @@ const UpdateMyListing = () => {
           />
         </div>
 
-        {/* Description */}
         <div>
           <label className="font-semibold">Description</label>
           <textarea
@@ -79,7 +77,6 @@ const UpdateMyListing = () => {
           ></textarea>
         </div>
 
-        {/* Category */}
         <div>
           <label className="font-semibold">Category</label>
           <select
@@ -96,7 +93,6 @@ const UpdateMyListing = () => {
           </select>
         </div>
 
-        {/* Rent Per Day */}
         <div>
           <label className="font-semibold">Rent Per Day ($)</label>
           <input
@@ -108,7 +104,6 @@ const UpdateMyListing = () => {
           />
         </div>
 
-        {/* Location */}
         <div>
           <label className="font-semibold">Location</label>
           <input
@@ -120,7 +115,6 @@ const UpdateMyListing = () => {
           />
         </div>
 
-        {/* Image URL */}
         <div>
           <label className="font-semibold">Image URL</label>
           <input
@@ -132,7 +126,6 @@ const UpdateMyListing = () => {
           />
         </div>
 
-        {/* Provider Info Read Only */}
         <div>
           <label className="font-semibold">Provider Name</label>
           <input
@@ -153,7 +146,6 @@ const UpdateMyListing = () => {
           />
         </div>
 
-        {/* Submit */}
         <button className="btn btn-primary w-full mt-4 text-white">
           Update Car
         </button>

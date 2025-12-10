@@ -7,7 +7,6 @@ const MyListings = () => {
   const { user } = useContext(AuthContext);
   const [cars, setCars] = useState([]);
 
-  // Fetch provider cars
   useEffect(() => {
     if (user?.email) {
       fetch(`http://localhost:3000/cars/provider/${user.email}`)
@@ -17,7 +16,6 @@ const MyListings = () => {
     }
   }, [user]);
 
-  // Delete Car
   const handleDelete = (id) => {
     const confirmDelete = confirm("Are you sure you want to delete this car?");
     if (!confirmDelete) return;
@@ -41,7 +39,6 @@ const MyListings = () => {
 
       <div className="overflow-x-auto shadow-lg bg-white rounded-lg">
         <table className="table w-full">
-          {/* Table Head */}
           <thead className="bg-gray-100 text-gray-700">
             <tr>
               <th>Car Name</th>
@@ -52,7 +49,6 @@ const MyListings = () => {
             </tr>
           </thead>
 
-          {/* Table Body */}
           <tbody>
             {cars.length === 0 ? (
               <tr>
