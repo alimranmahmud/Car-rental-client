@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 
 const FeatureCard = ({ car }) => {
-  const {_id, carName, image, rentPerDay, category, providerName } = car;
-
+  const { _id, carName, image, rentPerDay, category, providerName, status } = car;
+  //console.log.log.log(status)
 
   return (
-    <div className="card  bg-white shadow-md hover:shadow-xl transition rounded-lg border">
-      
+    <div className="card  bg-white shadow-md hover:shadow-xl transition rounded-lg border relative">
+
       <figure className="h-48 w-full overflow-hidden">
         <img
           src={image}
@@ -14,6 +14,11 @@ const FeatureCard = ({ car }) => {
           className="w-full h-full object-cover hover:scale-105 transition duration-300"
         />
       </figure>
+      <h2 className={`px-3 py-1 text-white rounded font-semibold border w-5/12 text-center absolute lg:left-50 left-39 top-2
+  ${status === "available"
+          ? "bg-green-600 border-green-600 "
+          : "bg-red-600 border-red-600 "
+        }`}>{status}</h2>
 
       <div className="card-body p-4">
 

@@ -8,7 +8,6 @@ const CarDetails = () => {
         fetch(`http://localhost:3000/cars/${id}`)
             .then(req => req.json())
             .then(data => {
-                console.log(data)
                 setCars(data)
             })
     }, [id])
@@ -20,7 +19,8 @@ const CarDetails = () => {
         rentPerDay,
         location,
         providerName,
-        providerEmail
+        providerEmail,
+        status
     } = car;
 
     return (
@@ -66,11 +66,21 @@ const CarDetails = () => {
             </div>
 
             <div className="mt-6">
-                <Link to={`/booking/${car._id}`}>
-                    <button className="btn btn-primary w-full text-white text-lg">
-                        Book Now
+                {status === "unavailable" ? (
+                    <button
+                        className="btn w-full bg-gray-400 border-gray-400 cursor-not-allowed text-white text-lg"
+                        disabled
+                    >
+                        Unavailable
                     </button>
-                </Link>
+                ) : (
+                    <Link to={`/booking/${car._id}`}>
+                        <button className="btn btn-primary w-full text-white text-lg">
+                            Book Now
+                        </button>
+                    </Link>
+                )}
+
             </div>
         </div>
     );

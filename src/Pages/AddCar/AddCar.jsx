@@ -21,10 +21,11 @@ const AddCar = () => {
       image: form.image.value,
       providerName: user?.displayName,
       providerEmail: user?.email,
-      status: "available"
+      status: "available",
+      user:0
     };
 
-    console.log("Car Added:", carData);
+    //console.log.log.log("Car Added:", carData);
 
     fetch("http://localhost:3000/cars", {
       method: "POST",
@@ -37,7 +38,7 @@ const AddCar = () => {
         form.reset();
       })
       .catch(err => {
-        console.error(err);
+        //console.log.log.error(err);
         toast.error("Failed to add car!");
       });
   };

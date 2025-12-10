@@ -33,15 +33,15 @@ const Register = () => {
             return setError("Password must be at least 6 characters long.");
         }
 
-        console.log({ name, email, photoURL, password });
+        //console.log.log.log({ name, email, photoURL, password });
         createUser(email, password)
         .then(user=>{
-            console.log(user)
+            //console.log.log.log(user)
             toast.success("Successfully create Account...")
             navigate('/')
         })
         .catch(err=>{
-            console.log(err)
+            console.log.log.log(err)
         })
     };
 

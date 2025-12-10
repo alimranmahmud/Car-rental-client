@@ -63,9 +63,9 @@ const Booking = () => {
       .then((res) => res.json())
       .then(() => {
         toast.success("Booking confirmed!");
-        navigate("/my-bookings");
+        navigate("/browse_cars");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.log.log.error(err));
   };
 
   return (

@@ -43,7 +43,7 @@ const UpdateMyListing = () => {
         navigate("/my-listings");
       })
       .catch((err) => {
-        console.error(err);
+        //console.log.log.error(err);
         toast.error("Update failed!");
       });
   };

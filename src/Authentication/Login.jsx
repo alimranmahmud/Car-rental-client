@@ -7,7 +7,7 @@ const Login = () => {
     const navigate=useNavigate()
     const { user, signInUser, googleSignIn } = use(AuthContext)
     const [error, setError] = useState("");
-    console.log(user)
+    //console.log.log.log(user)
     const handleLogin = (e) => {
         e.preventDefault();
         setError("");
@@ -31,10 +31,10 @@ const Login = () => {
             return setError("Password must be at least 6 characters long.");
         }
 
-        console.log("Logging in:", { email, password });
+        //console.log.log.log("Logging in:", { email, password });
         signInUser(email, password)
             .then(user => {
-                console.log(user)
+                //console.log.log.log(user)
                 if (user) {
                     toast.success("Log in successfully")
                     navigate('/')
@@ -42,14 +42,14 @@ const Login = () => {
                 }
             })
             .catch(err => {
-                console.log('imran', err)
+                console.log.log.log('imran', err)
                 toast.error("Please try again!")
             })
     };
     const handleGoogleLogin = () => {
         googleSignIn()
             .then((user) => {
-                console.log(user)
+                console.log.log.log(user)
                                 navigate('/browse_cars')
 
                 toast.success("Successfully Login with you google account")
@@ -58,7 +58,7 @@ const Login = () => {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode, errorMessage)
+                console.log.log.log(errorCode, errorMessage)
             });
 
     }

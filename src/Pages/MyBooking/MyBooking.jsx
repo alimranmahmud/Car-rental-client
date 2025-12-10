@@ -11,7 +11,7 @@ const MyBookings = () => {
       fetch(`http://localhost:3000/bookings/${user.email}`)
         .then((res) => res.json())
         .then((data) => setBookings(data))
-        .catch((err) => console.error(err));
+        .catch((err) => console.log.log.error(err));
     }
   }, [user]);
 
@@ -33,7 +33,7 @@ const MyBookings = () => {
         }
       })
       .catch((err) => {
-        console.error(err);
+        //console.log.log.error(err);
         toast.error("Failed to cancel booking");
       });
   };

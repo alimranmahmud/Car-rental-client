@@ -19,7 +19,7 @@ const Header = () => {
         signOutUser()
             .then(() => {
             }).catch((error) => {
-                console.log(error)
+                //console.log.log.log(error)
             });
     }
 

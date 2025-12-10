@@ -12,7 +12,7 @@ const MyListings = () => {
       fetch(`http://localhost:3000/cars/provider/${user.email}`)
         .then((res) => res.json())
         .then((data) => setCars(data))
-        .catch((err) => console.error(err));
+        .catch((err) => console.log.log.error(err));
     }
   }, [user]);
 
@@ -30,7 +30,7 @@ const MyListings = () => {
           toast.success("Car deleted successfully!");
         }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.log.error(err));
   };
 
   return (
