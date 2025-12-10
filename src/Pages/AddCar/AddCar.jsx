@@ -22,7 +22,7 @@ const AddCar = () => {
       providerName: user?.displayName,
       providerEmail: user?.email,
       status: "available",
-      user:0
+      usesCar:0
     };
 
     //console.log.log.log("Car Added:", carData);
