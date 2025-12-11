@@ -32,7 +32,7 @@ const UpdateMyListing = () => {
       providerEmail,
     };
 
-    fetch(`http://localhost:3000/cars/${_id}`, {
+    fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/${_id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updatedCar)

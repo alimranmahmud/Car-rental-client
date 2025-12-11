@@ -5,7 +5,7 @@ const CarDetails = () => {
     const { id } = useParams()
     const [car, setCars] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:3000/cars/${id}`)
+        fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/${id}`)
             .then(req => req.json())
             .then(data => {
                 setCars(data)

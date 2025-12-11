@@ -55,7 +55,7 @@ const Booking = () => {
       status: "confirmed"
     };
 
-    fetch("http://localhost:3000/bookings", {
+    fetch("https://car-rental-server-pink-sigma.vercel.app/bookings", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(bookingInfo)

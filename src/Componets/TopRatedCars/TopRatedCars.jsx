@@ -7,7 +7,7 @@ const TopRatedCars = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/top/rated-cars")
+    fetch("https://car-rental-server-pink-sigma.vercel.app/top/rated-cars")
       .then((res) => res.json())
       .then((data) => {
         setTopCars(data);

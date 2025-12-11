@@ -11,7 +11,7 @@ const MyListings = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/cars/provider/${user.email}`)
+      fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/provider/${user.email}`)
         .then((res) => res.json())
         .then((data) => setCars(data))
         .catch((err) => console.error(err));
@@ -22,7 +22,7 @@ const MyListings = () => {
     const confirmDelete = confirm("Are you sure you want to delete this car?");
     if (!confirmDelete) return;
 
-    fetch(`http://localhost:3000/cars/${id}`, {
+    fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

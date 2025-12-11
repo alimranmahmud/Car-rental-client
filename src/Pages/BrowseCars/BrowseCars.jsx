@@ -14,7 +14,7 @@ const BrowseCars = () => {
         const searchText = e.target.search.value;
         setLoading(true);
 
-        fetch(`http://localhost:3000/search?search=${searchText}`)
+        fetch(`https://car-rental-server-pink-sigma.vercel.app/search?search=${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setSearchCars(data);

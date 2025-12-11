@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/browse_cars',
-                loader: () => fetch('http://localhost:3000/cars'),
+                loader: () => fetch('https://car-rental-server-pink-sigma.vercel.app/cars'),
                 element: <BrowseCars></BrowseCars>
             },
             {
@@ -46,12 +46,12 @@ const router = createBrowserRouter([
                 path: "/booking/:id",
                 element: <PrivateRoute><Booking /></PrivateRoute>,
                 loader: ({ params }) =>
-                    fetch(`http://localhost:3000/cars/${params.id}`)
+                    fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/update-car/:id",
                 element: <PrivateRoute><UpdateMyListing></UpdateMyListing></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/cars/${params.id}`)
+                loader: ({ params }) => fetch(`https://car-rental-server-pink-sigma.vercel.app/cars/${params.id}`)
             },
             {
                 path: '/login',

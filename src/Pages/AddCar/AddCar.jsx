@@ -27,7 +27,7 @@ const AddCar = () => {
 
     //console.log.log.log("Car Added:", carData);
 
-    fetch("http://localhost:3000/cars", {
+    fetch("https://car-rental-server-pink-sigma.vercel.app/cars", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(carData)

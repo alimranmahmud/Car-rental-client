@@ -8,7 +8,7 @@ const FeaturedCars = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch("http://localhost:3000/latest-cars")
+        fetch("https://car-rental-server-pink-sigma.vercel.app/latest-cars")
             .then(res => res.json())
             .then(data => {
                 setFeaturedCar(data)
