@@ -15,7 +15,7 @@ const Banner = () => {
         {
             id: "slide2",
             title: "Drive With Comfort & Style",
-            description: "Our premium car collection ensures comfort, safety, and a smooth driving experience.",
+            description: "Our premium car collection ensures comfortable, safety, and a smooth driving experience.",
             buttonText: "Explore Models",
             image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…",
             prev: "slide1",
