@@ -4,7 +4,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const { user, signInUser, googleSignIn } = use(AuthContext)
     const [error, setError] = useState("");
     //console.log.log.log(user)
@@ -50,7 +50,7 @@ const Login = () => {
         googleSignIn()
             .then((user) => {
                 console.log.log.log(user)
-                                navigate('/browse_cars')
+                navigate('/')
 
                 toast.success("Successfully Login with you google account")
 
