@@ -42,7 +42,6 @@ const MyListings = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Title */}
       <motion.h2
         className="text-3xl font-bold text-center mb-6 flex justify-center items-center gap-2"
         initial={{ y: -20 }}
@@ -52,14 +51,12 @@ const MyListings = () => {
         <FaCarSide className="text-primary" /> My Listings
       </motion.h2>
 
-      {/* Responsive Table Wrapper */}
       <motion.div
         className="bg-white rounded-xl shadow-xl overflow-hidden"
         initial={{ scale: 0.95 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Mobile Card View */}
         <div className="block md:hidden p-3 space-y-4">
           {cars.length === 0 ? (
             <p className="text-center py-6 text-gray-500">
@@ -108,7 +105,6 @@ const MyListings = () => {
           )}
         </div>
 
-        {/* Desktop Table View */}
         <div className="hidden md:block overflow-x-auto">
           <table className="table w-full">
             <thead className="bg-gray-100 text-gray-700">
