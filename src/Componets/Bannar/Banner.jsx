@@ -35,7 +35,7 @@ const Banner = () => {
             title: "Your Journey Starts Here",
             description: "Book your dream car today and experience a hassle-free rental process.",
             buttonText: "Start Booking",
-            image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…",
+            image: "https://images.unsplash.com/photo-1558486799-ebad18202175?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwYm13fGVufDB8fDB8fHww",
             prev: "slide3",
             next: "slide1",
         },
