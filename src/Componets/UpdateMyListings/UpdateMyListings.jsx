@@ -40,7 +40,7 @@ const UpdateMyListing = () => {
       .then((res) => res.json())
       .then(() => {
         toast.success("Car updated successfully!");
-        navigate("/my-listings");
+        navigate("/browse_cars");
       })
       .catch((err) => {
         //console.log.log.error(err);
