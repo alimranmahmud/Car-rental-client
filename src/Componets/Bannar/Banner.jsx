@@ -46,24 +46,27 @@ const Banner = () => {
             {carouselData.map((slide) => (
                 <div key={slide.id} id={slide.id} className="carousel-item relative w-full">
 
+                    {/* Responsive Image Height */}
                     <motion.img
                         src={slide.image}
-                        className="w-full h-70 md:h-80 lg:h-120 object-cover"
+                        className="w-full h-60 sm:h-72 md:h-80 lg:h-[500px] object-cover"
                         alt="slide"
                         initial={{ scale: 1.1, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
                     />
 
+                    {/* Responsive Text Container */}
                     <motion.div
-                        className="absolute inset-0 bg-black/40 flex items-center px-25"
+                        className="absolute inset-0 bg-black/40 flex items-center px-4 sm:px-10 md:px-16 lg:px-24"
                         initial={{ opacity: 0, x: -80 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="max-w-lg text-white space-y-3">
+                        <div className="max-w-lg text-white space-y-2 sm:space-y-3">
+                            
                             <motion.h2
-                                className="text-4xl font-bold"
+                                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.3 }}
@@ -72,7 +75,7 @@ const Banner = () => {
                             </motion.h2>
 
                             <motion.p
-                                className="text-lg opacity-90"
+                                className="text-sm sm:text-base md:text-lg opacity-90"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.5 }}
@@ -81,7 +84,7 @@ const Banner = () => {
                             </motion.p>
 
                             <motion.button
-                                className="btn btn-primary"
+                                className="btn btn-primary btn-sm sm:btn-md"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 250 }}
@@ -91,14 +94,15 @@ const Banner = () => {
                         </div>
                     </motion.div>
 
+                    {/* Navigation Arrows Responsive */}
                     <motion.div
-                        className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+                        className="absolute left-3 right-3 sm:left-5 sm:right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7 }}
                     >
-                        <a href={`#${slide.prev}`} className="btn btn-circle">❮</a>
-                        <a href={`#${slide.next}`} className="btn btn-circle">❯</a>
+                        <a href={`#${slide.prev}`} className="btn btn-circle btn-sm sm:btn-md">❮</a>
+                        <a href={`#${slide.next}`} className="btn btn-circle btn-sm sm:btn-md">❯</a>
                     </motion.div>
                 </div>
             ))}
